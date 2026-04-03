@@ -8,3 +8,12 @@ requests
 lxml
 html5lib
 beautifulsoup4
+matplotlib==3.8.4
+seaborn==0.13.2
+statsmodels==0.14.4
+arch==7.2.0
+cpi==1.0.0
+nasdaq-data-link==1.0.4
+scikit-learn==1.5.2
+sktime==0.26.0
+pmdarima==2.0.4
