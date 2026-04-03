@@ -1,0 +1,10 @@
+streamlit
+yfinance
+pandas==1.5.3
+numpy==1.26.4
+cufflinks==0.17.3
+plotly==5.24.1
+requests
+lxml
+html5lib
+beautifulsoup4
