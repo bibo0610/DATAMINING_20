@@ -8,6 +8,29 @@ from plotly.offline import iplot
 import requests
 from io import StringIO
 
+st.set_page_config(page_title="Technical Analysis App", layout="wide")
+
+st.markdown("""
+    <style>
+        .block-container {
+            padding-top: 1.2rem;
+            padding-bottom: 1rem;
+        }
+
+        [data-testid="stSidebarHeader"] {
+            height: 0rem;
+        }
+
+        [data-testid="stSidebarHeader"] > div {
+            display: none;
+        }
+
+        section[data-testid="stSidebar"] .block-container {
+            padding-top: 0.5rem;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 cf.go_offline()
 
 ### 2. Định nghĩa một hàm để tải xuống danh sách các cổ phiếu thành phần của chỉ số S&P 500 từ Wikipedia
@@ -111,12 +134,16 @@ rsi_lower = exp_rsi.number_input(label = "RSI Lower",
                                 step=1)
 
 ### 10. Chỉ định tiêu đề và văn bản bổ sung trong phần thân chính của ứng dụng:
-st.title("Technical Analysis App")
+st.markdown("## A simple web app for technical analysis")
 st.write("""
         ### User Manual
-        - Select a company from the S&P 500 constituents
-        - Choose the date range
-        - Enable technical indicators from the sidebar
+        - you can select any of the companies that is a component of the S&P index
+        - you can select the time period of your interest
+        - you can download the selected data as a CSV file
+        - you can add the following Technical Indicators to the plot: Simple Moving
+        
+        Average, Bollinger Bands, Relative Strength Index
+        - you can experiment with different parameters of the indicators
         """)
 
 ### 11. Tải dữ liệu giá cổ phiếu trong quá khứ:
@@ -148,7 +175,7 @@ data_exp.download_button(
 )
 
 ### 13. Tạo biểu đồ nến với các chỉ báo TA đã chọn:
-title_str = f"{tickers_companies_dict[ticker]} ({ticker})"
+title_str = f"{tickers_companies_dict[ticker]}'s Stock Price"
 qf = cf.QuantFig(df, title=title_str)
 
 if volume_flag:
@@ -178,7 +205,7 @@ for trace in fig.data:
 
 fig.update_layout(
     title={
-        "text": f"{title_str} - Technical Analysis",
+        "text": f"{title_str}",
         "x": 0.02,
         "xanchor": "left"
     },
