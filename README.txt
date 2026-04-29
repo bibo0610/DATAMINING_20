@@ -164,12 +164,14 @@ Cấu trúc các tập tin trong folder project như sau:
 /
 |-- DM_Report.docx
 |-- README.txt
-|-- KaggleV2-May-2016.csv
-|-- data.csv
-|-- medical_appointment_noshow_analysis.ipynb
-|-- student_dropout_academic_success.ipynb
-|-- medical_model_comparison_results.csv
-|-- student_model_comparison_results.csv
+|-- dataset1
+  |-- KaggleV2-May-2016.csv
+  |-- medical_appointment_noshow_analysis.ipynb
+  |-- medical_model_comparison_results.csv
+|-- dataset2
+  |-- data.csv
+  |-- student_dropout_academic_success.ipynb
+  |-- student_model_comparison_results.csv
 
 ====================================================================
 4. CÔNG CỤ VÀ THƯ VIỆN SỬ DỤNG
