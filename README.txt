@@ -1,8 +1,6 @@
 ĐỒ ÁN CUỐI KÌ KHAI THÁC DỮ LIỆU VÀ ỨNG DỤNG
 
-Ứng dụng khai phá dữ liệu trong hai bài toán phân loại:
-(1) Dự đoán bệnh nhân bỏ hẹn khám bệnh
-(2) Dự đoán tình trạng học tập của sinh viên
+Ứng dụng khai phá dữ liệu trong dự đoán bệnh nhân bỏ hẹn khám bệnh và tình trạng học tập của sinh viên
 
 THÀNH VIÊN THỰC HIỆN:
 1. Họ và tên: Nguyễn Dương Bảo Trân
@@ -14,14 +12,17 @@ THÀNH VIÊN THỰC HIỆN:
 1. MÔ TẢ CHUNG
 ====================================================================
 
-Đồ án thực hiện trên 2 bộ dữ liệu khác nhau, tương ứng với 2 bài toán phân loại độc lập:
+Đồ án thực hiện trên 2 bộ dữ liệu khác nhau, thuộc hai lĩnh vực là y tế và giáo dục.
 
 - Dataset 1: Medical Appointment No Shows
-  Mục tiêu là dự đoán bệnh nhân có bỏ hẹn khám bệnh hay không (No-show).
+  Bộ dữ liệu này được khai thác theo hai hướng:
+  + phân loại để dự đoán bệnh nhân có bỏ hẹn khám bệnh hay không (No-show);
+  + phân tích kết hợp để tìm các tổ hợp điều kiện thường xuất hiện cùng với hành vi no-show.
 
 - Dataset 2: Predict Students’ Dropout and Academic Success
-  Mục tiêu là dự đoán tình trạng học tập của sinh viên thuộc một trong ba nhóm:
-  Dropout, Enrolled hoặc Graduate.
+  Bộ dữ liệu này được khai thác theo hai hướng:
+  + phân loại để dự đoán tình trạng học tập của sinh viên thuộc một trong ba nhóm Dropout, Enrolled hoặc Graduate;
+  + phân tích kết hợp để tìm các tổ hợp đặc trưng thường xuất hiện cùng với nhóm Dropout hoặc Graduate.
 
 Ngoài phần xây dựng mô hình học máy, đồ án còn tập trung vào hướng khai phá dữ liệu thông qua:
 - tiền xử lý dữ liệu,
