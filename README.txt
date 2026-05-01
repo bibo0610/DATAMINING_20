@@ -230,5 +230,5 @@ Các nội dung khai phá dữ liệu chính gồm:
 7. GHI CHÚ
 ====================================================================
 
-Project được thực hiện cho mục đích học tập trong môn Khai phá dữ liệu và ứng dụng.
+Project được thực hiện cho mục đích học tập trong môn Khai thác dữ liệu và ứng dụng.
 Mọi bộ dữ liệu được sử dụng trong đồ án đều là dữ liệu công khai từ Kaggle và UCI.
